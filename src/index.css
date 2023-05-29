@@ -1,0 +1,107 @@
+:root {
+  --backgorund: #2f2f2f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.game{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--backgorund);
+  text-align: center;
+}
+
+
+.game-container {
+  
+  display: grid;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+}
+
+.game-button{
+  all: unset;
+  width: 220px;
+  height: 220px;
+  transition-duration: 300ms;
+  transition-property: scale;
+
+}
+.game-button:hover{
+  cursor: pointer;
+  scale: 110%;
+}
+
+.game-button.top-left{
+  
+  margin-right: 15px;
+  border-radius: 220px 0 0 0;
+}
+.game-button.top-right{
+  margin-bottom: 15px;
+  margin-left: 15px;
+  border-radius: 0 220px 0 0;
+}
+.game-button.bot-left{
+  margin-top: 15px;
+  border-radius: 0 0 0 220px;
+}
+.game-button.bot-right{
+  margin-left: 15px;
+  margin-top: 15px;
+  border-radius: 0 0 220px 0;
+}
+
+.game-button.red{
+  background-color: rgb(207, 20, 20);
+  
+}
+.game-button.blue{
+background-color: rgb(19, 51, 211);
+}
+.game-button.green{
+background-color: rgb(20, 166, 20);
+}
+.game-button.orange{
+background-color: rgb(197, 133, 14);
+}
+
+.game-button.highlight{
+  filter: brightness(1.75);
+  
+}
+
+.game-button.clicked {
+  
+  filter: grayscale(70%);
+}
+.play-button{
+  all: unset;
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  background-color: var(--backgorund);
+  transition-duration: 300ms;
+  transition-property: scale;
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.play-button:hover {
+  scale: 120%;
+  cursor: pointer;
+}
+
